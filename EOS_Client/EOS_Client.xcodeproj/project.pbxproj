@@ -1,0 +1,808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DC1B6B22D679E5C32EEB85F /* Pods_EOS_ClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1580245100888195B0F0B325 /* Pods_EOS_ClientTests.framework */; };
+		3C07CEDFA8EE810E2509F1B7 /* Pods_EOS_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8133CE324DB6D599E557E2A /* Pods_EOS_Client.framework */; };
+		B577C662210F5B4200FAEB81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C661210F5B4200FAEB81 /* AppDelegate.swift */; };
+		B577C664210F5B4200FAEB81 /* BlockContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C663210F5B4200FAEB81 /* BlockContentsViewController.swift */; };
+		B577C667210F5B4200FAEB81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B577C665210F5B4200FAEB81 /* Main.storyboard */; };
+		B577C669210F5B4500FAEB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B577C668210F5B4500FAEB81 /* Assets.xcassets */; };
+		B577C66C210F5B4500FAEB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B577C66A210F5B4500FAEB81 /* LaunchScreen.storyboard */; };
+		B577C677210F5B4500FAEB81 /* EOS_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C676210F5B4500FAEB81 /* EOS_ClientTests.swift */; };
+		B577C682210F5B4500FAEB81 /* EOS_ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C681210F5B4500FAEB81 /* EOS_ClientUITests.swift */; };
+		B577C690210F5E7200FAEB81 /* EOSNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C68F210F5E7200FAEB81 /* EOSNetworking.swift */; };
+		B577C691210F5E7200FAEB81 /* EOSNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C68F210F5E7200FAEB81 /* EOSNetworking.swift */; };
+		B577C692210F5E7200FAEB81 /* EOSNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C68F210F5E7200FAEB81 /* EOSNetworking.swift */; };
+		B577C694210F607700FAEB81 /* BlockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C693210F607700FAEB81 /* BlockInfo.swift */; };
+		B577C695210F607700FAEB81 /* BlockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C693210F607700FAEB81 /* BlockInfo.swift */; };
+		B577C696210F607700FAEB81 /* BlockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C693210F607700FAEB81 /* BlockInfo.swift */; };
+		B577C69C210F613B00FAEB81 /* Date+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C69B210F613B00FAEB81 /* Date+Util.swift */; };
+		B577C69D210F613B00FAEB81 /* Date+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C69B210F613B00FAEB81 /* Date+Util.swift */; };
+		B577C69E210F613B00FAEB81 /* Date+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C69B210F613B00FAEB81 /* Date+Util.swift */; };
+		B577C6A0210F61A100FAEB81 /* BlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C69F210F61A100FAEB81 /* BlockData.swift */; };
+		B577C6A1210F61A100FAEB81 /* BlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C69F210F61A100FAEB81 /* BlockData.swift */; };
+		B577C6A2210F61A100FAEB81 /* BlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C69F210F61A100FAEB81 /* BlockData.swift */; };
+		B577C6A4210F640400FAEB81 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C6A3210F640400FAEB81 /* Region.swift */; };
+		B577C6A5210F640400FAEB81 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C6A3210F640400FAEB81 /* Region.swift */; };
+		B577C6A6210F640400FAEB81 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C6A3210F640400FAEB81 /* Region.swift */; };
+		B577C6A8210F641600FAEB81 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C6A7210F641600FAEB81 /* Transaction.swift */; };
+		B577C6A9210F641600FAEB81 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C6A7210F641600FAEB81 /* Transaction.swift */; };
+		B577C6AA210F641600FAEB81 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C6A7210F641600FAEB81 /* Transaction.swift */; };
+		B577C6AC210F642500FAEB81 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C6AB210F642500FAEB81 /* Cycle.swift */; };
+		B577C6AD210F642500FAEB81 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C6AB210F642500FAEB81 /* Cycle.swift */; };
+		B577C6AE210F642500FAEB81 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C6AB210F642500FAEB81 /* Cycle.swift */; };
+		FC85667A643D085BEF7DD6FE /* Pods_EOS_ClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027EC4CD94C8218BB586834E /* Pods_EOS_ClientUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B577C673210F5B4500FAEB81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B577C656210F5B4200FAEB81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B577C65D210F5B4200FAEB81;
+			remoteInfo = EOS_Client;
+		};
+		B577C67E210F5B4500FAEB81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B577C656210F5B4200FAEB81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B577C65D210F5B4200FAEB81;
+			remoteInfo = EOS_Client;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		027EC4CD94C8218BB586834E /* Pods_EOS_ClientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EOS_ClientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1580245100888195B0F0B325 /* Pods_EOS_ClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EOS_ClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20626F54B0B33F0B7FB92E53 /* Pods-EOS_ClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS_ClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EOS_ClientTests/Pods-EOS_ClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A06530660E4125C8C23CE06 /* Pods-EOS_Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS_Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EOS_Client/Pods-EOS_Client.debug.xcconfig"; sourceTree = "<group>"; };
+		5F64F620447F0C0228DD15BA /* Pods-EOS_ClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS_ClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EOS_ClientUITests/Pods-EOS_ClientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		94EB592793FD4BE620992612 /* Pods-EOS_ClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS_ClientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EOS_ClientUITests/Pods-EOS_ClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B577C65E210F5B4200FAEB81 /* EOS_Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EOS_Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B577C661210F5B4200FAEB81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B577C663210F5B4200FAEB81 /* BlockContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockContentsViewController.swift; sourceTree = "<group>"; };
+		B577C666210F5B4200FAEB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B577C668210F5B4500FAEB81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B577C66B210F5B4500FAEB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B577C66D210F5B4500FAEB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B577C672210F5B4500FAEB81 /* EOS_ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EOS_ClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B577C676210F5B4500FAEB81 /* EOS_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOS_ClientTests.swift; sourceTree = "<group>"; };
+		B577C678210F5B4500FAEB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B577C67D210F5B4500FAEB81 /* EOS_ClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EOS_ClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B577C681210F5B4500FAEB81 /* EOS_ClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOS_ClientUITests.swift; sourceTree = "<group>"; };
+		B577C683210F5B4500FAEB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B577C68F210F5E7200FAEB81 /* EOSNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSNetworking.swift; sourceTree = "<group>"; };
+		B577C693210F607700FAEB81 /* BlockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfo.swift; sourceTree = "<group>"; };
+		B577C69B210F613B00FAEB81 /* Date+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Util.swift"; sourceTree = "<group>"; };
+		B577C69F210F61A100FAEB81 /* BlockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockData.swift; sourceTree = "<group>"; };
+		B577C6A3210F640400FAEB81 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		B577C6A7210F641600FAEB81 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		B577C6AB210F642500FAEB81 /* Cycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cycle.swift; sourceTree = "<group>"; };
+		D1703ECE740C3430C192F9D6 /* Pods-EOS_ClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS_ClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EOS_ClientTests/Pods-EOS_ClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2478A7E409A6FBEE32EFA69 /* Pods-EOS_Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS_Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-EOS_Client/Pods-EOS_Client.release.xcconfig"; sourceTree = "<group>"; };
+		E8133CE324DB6D599E557E2A /* Pods_EOS_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EOS_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B577C65B210F5B4200FAEB81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C07CEDFA8EE810E2509F1B7 /* Pods_EOS_Client.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B577C66F210F5B4500FAEB81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DC1B6B22D679E5C32EEB85F /* Pods_EOS_ClientTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B577C67A210F5B4500FAEB81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC85667A643D085BEF7DD6FE /* Pods_EOS_ClientUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D1B58ADF00616606349DFCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A06530660E4125C8C23CE06 /* Pods-EOS_Client.debug.xcconfig */,
+				E2478A7E409A6FBEE32EFA69 /* Pods-EOS_Client.release.xcconfig */,
+				D1703ECE740C3430C192F9D6 /* Pods-EOS_ClientTests.debug.xcconfig */,
+				20626F54B0B33F0B7FB92E53 /* Pods-EOS_ClientTests.release.xcconfig */,
+				94EB592793FD4BE620992612 /* Pods-EOS_ClientUITests.debug.xcconfig */,
+				5F64F620447F0C0228DD15BA /* Pods-EOS_ClientUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		77552F72BDB93AD4FF3A3531 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8133CE324DB6D599E557E2A /* Pods_EOS_Client.framework */,
+				1580245100888195B0F0B325 /* Pods_EOS_ClientTests.framework */,
+				027EC4CD94C8218BB586834E /* Pods_EOS_ClientUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B577C655210F5B4200FAEB81 = {
+			isa = PBXGroup;
+			children = (
+				B577C660210F5B4200FAEB81 /* EOS_Client */,
+				B577C675210F5B4500FAEB81 /* EOS_ClientTests */,
+				B577C680210F5B4500FAEB81 /* EOS_ClientUITests */,
+				B577C65F210F5B4200FAEB81 /* Products */,
+				0D1B58ADF00616606349DFCF /* Pods */,
+				77552F72BDB93AD4FF3A3531 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B577C65F210F5B4200FAEB81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B577C65E210F5B4200FAEB81 /* EOS_Client.app */,
+				B577C672210F5B4500FAEB81 /* EOS_ClientTests.xctest */,
+				B577C67D210F5B4500FAEB81 /* EOS_ClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B577C660210F5B4200FAEB81 /* EOS_Client */ = {
+			isa = PBXGroup;
+			children = (
+				B577C69A210F609500FAEB81 /* View */,
+				B577C699210F608300FAEB81 /* Controller */,
+				B577C698210F607E00FAEB81 /* Util */,
+				B577C697210F607A00FAEB81 /* Model */,
+				B577C661210F5B4200FAEB81 /* AppDelegate.swift */,
+				B577C668210F5B4500FAEB81 /* Assets.xcassets */,
+				B577C66A210F5B4500FAEB81 /* LaunchScreen.storyboard */,
+				B577C66D210F5B4500FAEB81 /* Info.plist */,
+			);
+			path = EOS_Client;
+			sourceTree = "<group>";
+		};
+		B577C675210F5B4500FAEB81 /* EOS_ClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				B577C676210F5B4500FAEB81 /* EOS_ClientTests.swift */,
+				B577C678210F5B4500FAEB81 /* Info.plist */,
+			);
+			path = EOS_ClientTests;
+			sourceTree = "<group>";
+		};
+		B577C680210F5B4500FAEB81 /* EOS_ClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B577C681210F5B4500FAEB81 /* EOS_ClientUITests.swift */,
+				B577C683210F5B4500FAEB81 /* Info.plist */,
+			);
+			path = EOS_ClientUITests;
+			sourceTree = "<group>";
+		};
+		B577C697210F607A00FAEB81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B577C693210F607700FAEB81 /* BlockInfo.swift */,
+				B577C69F210F61A100FAEB81 /* BlockData.swift */,
+				B577C6A3210F640400FAEB81 /* Region.swift */,
+				B577C6A7210F641600FAEB81 /* Transaction.swift */,
+				B577C6AB210F642500FAEB81 /* Cycle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B577C698210F607E00FAEB81 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B577C68F210F5E7200FAEB81 /* EOSNetworking.swift */,
+				B577C69B210F613B00FAEB81 /* Date+Util.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		B577C699210F608300FAEB81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B577C663210F5B4200FAEB81 /* BlockContentsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B577C69A210F609500FAEB81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B577C665210F5B4200FAEB81 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B577C65D210F5B4200FAEB81 /* EOS_Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B577C686210F5B4500FAEB81 /* Build configuration list for PBXNativeTarget "EOS_Client" */;
+			buildPhases = (
+				8DAEFE37AE022F5BC203A44C /* [CP] Check Pods Manifest.lock */,
+				B577C65A210F5B4200FAEB81 /* Sources */,
+				B577C65B210F5B4200FAEB81 /* Frameworks */,
+				B577C65C210F5B4200FAEB81 /* Resources */,
+				508C9DA1D04654E71E2A1D7C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EOS_Client;
+			productName = EOS_Client;
+			productReference = B577C65E210F5B4200FAEB81 /* EOS_Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B577C671210F5B4500FAEB81 /* EOS_ClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B577C689210F5B4500FAEB81 /* Build configuration list for PBXNativeTarget "EOS_ClientTests" */;
+			buildPhases = (
+				68360D565F5134A9136EC4C0 /* [CP] Check Pods Manifest.lock */,
+				B577C66E210F5B4500FAEB81 /* Sources */,
+				B577C66F210F5B4500FAEB81 /* Frameworks */,
+				B577C670210F5B4500FAEB81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B577C674210F5B4500FAEB81 /* PBXTargetDependency */,
+			);
+			name = EOS_ClientTests;
+			productName = EOS_ClientTests;
+			productReference = B577C672210F5B4500FAEB81 /* EOS_ClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B577C67C210F5B4500FAEB81 /* EOS_ClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B577C68C210F5B4500FAEB81 /* Build configuration list for PBXNativeTarget "EOS_ClientUITests" */;
+			buildPhases = (
+				65F23202B0AD4302095B7097 /* [CP] Check Pods Manifest.lock */,
+				B577C679210F5B4500FAEB81 /* Sources */,
+				B577C67A210F5B4500FAEB81 /* Frameworks */,
+				B577C67B210F5B4500FAEB81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B577C67F210F5B4500FAEB81 /* PBXTargetDependency */,
+			);
+			name = EOS_ClientUITests;
+			productName = EOS_ClientUITests;
+			productReference = B577C67D210F5B4500FAEB81 /* EOS_ClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B577C656210F5B4200FAEB81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Matt Versteeg";
+				TargetAttributes = {
+					B577C65D210F5B4200FAEB81 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					B577C671210F5B4500FAEB81 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = B577C65D210F5B4200FAEB81;
+					};
+					B577C67C210F5B4500FAEB81 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = B577C65D210F5B4200FAEB81;
+					};
+				};
+			};
+			buildConfigurationList = B577C659210F5B4200FAEB81 /* Build configuration list for PBXProject "EOS_Client" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B577C655210F5B4200FAEB81;
+			productRefGroup = B577C65F210F5B4200FAEB81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B577C65D210F5B4200FAEB81 /* EOS_Client */,
+				B577C671210F5B4500FAEB81 /* EOS_ClientTests */,
+				B577C67C210F5B4500FAEB81 /* EOS_ClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B577C65C210F5B4200FAEB81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B577C66C210F5B4500FAEB81 /* LaunchScreen.storyboard in Resources */,
+				B577C669210F5B4500FAEB81 /* Assets.xcassets in Resources */,
+				B577C667210F5B4200FAEB81 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B577C670210F5B4500FAEB81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B577C67B210F5B4500FAEB81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		508C9DA1D04654E71E2A1D7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EOS_Client/Pods-EOS_Client-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EOS_Client/Pods-EOS_Client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65F23202B0AD4302095B7097 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EOS_ClientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68360D565F5134A9136EC4C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EOS_ClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DAEFE37AE022F5BC203A44C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EOS_Client-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B577C65A210F5B4200FAEB81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B577C690210F5E7200FAEB81 /* EOSNetworking.swift in Sources */,
+				B577C69C210F613B00FAEB81 /* Date+Util.swift in Sources */,
+				B577C6A8210F641600FAEB81 /* Transaction.swift in Sources */,
+				B577C694210F607700FAEB81 /* BlockInfo.swift in Sources */,
+				B577C6A0210F61A100FAEB81 /* BlockData.swift in Sources */,
+				B577C6AC210F642500FAEB81 /* Cycle.swift in Sources */,
+				B577C6A4210F640400FAEB81 /* Region.swift in Sources */,
+				B577C664210F5B4200FAEB81 /* BlockContentsViewController.swift in Sources */,
+				B577C662210F5B4200FAEB81 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B577C66E210F5B4500FAEB81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B577C6A9210F641600FAEB81 /* Transaction.swift in Sources */,
+				B577C677210F5B4500FAEB81 /* EOS_ClientTests.swift in Sources */,
+				B577C69D210F613B00FAEB81 /* Date+Util.swift in Sources */,
+				B577C695210F607700FAEB81 /* BlockInfo.swift in Sources */,
+				B577C6A5210F640400FAEB81 /* Region.swift in Sources */,
+				B577C691210F5E7200FAEB81 /* EOSNetworking.swift in Sources */,
+				B577C6AD210F642500FAEB81 /* Cycle.swift in Sources */,
+				B577C6A1210F61A100FAEB81 /* BlockData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B577C679210F5B4500FAEB81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B577C6AA210F641600FAEB81 /* Transaction.swift in Sources */,
+				B577C682210F5B4500FAEB81 /* EOS_ClientUITests.swift in Sources */,
+				B577C69E210F613B00FAEB81 /* Date+Util.swift in Sources */,
+				B577C696210F607700FAEB81 /* BlockInfo.swift in Sources */,
+				B577C6A6210F640400FAEB81 /* Region.swift in Sources */,
+				B577C692210F5E7200FAEB81 /* EOSNetworking.swift in Sources */,
+				B577C6AE210F642500FAEB81 /* Cycle.swift in Sources */,
+				B577C6A2210F61A100FAEB81 /* BlockData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B577C674210F5B4500FAEB81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B577C65D210F5B4200FAEB81 /* EOS_Client */;
+			targetProxy = B577C673210F5B4500FAEB81 /* PBXContainerItemProxy */;
+		};
+		B577C67F210F5B4500FAEB81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B577C65D210F5B4200FAEB81 /* EOS_Client */;
+			targetProxy = B577C67E210F5B4500FAEB81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B577C665210F5B4200FAEB81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B577C666210F5B4200FAEB81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B577C66A210F5B4500FAEB81 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B577C66B210F5B4500FAEB81 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B577C684210F5B4500FAEB81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B577C685210F5B4500FAEB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B577C687210F5B4500FAEB81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A06530660E4125C8C23CE06 /* Pods-EOS_Client.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P4MN89RJA;
+				INFOPLIST_FILE = EOS_Client/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.steggosoft.EOS-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B577C688210F5B4500FAEB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2478A7E409A6FBEE32EFA69 /* Pods-EOS_Client.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P4MN89RJA;
+				INFOPLIST_FILE = EOS_Client/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.steggosoft.EOS-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B577C68A210F5B4500FAEB81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1703ECE740C3430C192F9D6 /* Pods-EOS_ClientTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P4MN89RJA;
+				INFOPLIST_FILE = EOS_ClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.steggosoft.EOS-ClientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EOS_Client.app/EOS_Client";
+			};
+			name = Debug;
+		};
+		B577C68B210F5B4500FAEB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20626F54B0B33F0B7FB92E53 /* Pods-EOS_ClientTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P4MN89RJA;
+				INFOPLIST_FILE = EOS_ClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.steggosoft.EOS-ClientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EOS_Client.app/EOS_Client";
+			};
+			name = Release;
+		};
+		B577C68D210F5B4500FAEB81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94EB592793FD4BE620992612 /* Pods-EOS_ClientUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P4MN89RJA;
+				INFOPLIST_FILE = EOS_ClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.steggosoft.EOS-ClientUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EOS_Client;
+			};
+			name = Debug;
+		};
+		B577C68E210F5B4500FAEB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F64F620447F0C0228DD15BA /* Pods-EOS_ClientUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P4MN89RJA;
+				INFOPLIST_FILE = EOS_ClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.steggosoft.EOS-ClientUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EOS_Client;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B577C659210F5B4200FAEB81 /* Build configuration list for PBXProject "EOS_Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B577C684210F5B4500FAEB81 /* Debug */,
+				B577C685210F5B4500FAEB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B577C686210F5B4500FAEB81 /* Build configuration list for PBXNativeTarget "EOS_Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B577C687210F5B4500FAEB81 /* Debug */,
+				B577C688210F5B4500FAEB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B577C689210F5B4500FAEB81 /* Build configuration list for PBXNativeTarget "EOS_ClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B577C68A210F5B4500FAEB81 /* Debug */,
+				B577C68B210F5B4500FAEB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B577C68C210F5B4500FAEB81 /* Build configuration list for PBXNativeTarget "EOS_ClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B577C68D210F5B4500FAEB81 /* Debug */,
+				B577C68E210F5B4500FAEB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B577C656210F5B4200FAEB81 /* Project object */;
+}

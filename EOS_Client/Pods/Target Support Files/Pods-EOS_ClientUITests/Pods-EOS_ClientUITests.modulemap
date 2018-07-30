@@ -1,0 +1,6 @@
+framework module Pods_EOS_ClientUITests {
+  umbrella header "Pods-EOS_ClientUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
