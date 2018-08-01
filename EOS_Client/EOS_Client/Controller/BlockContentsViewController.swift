@@ -44,7 +44,7 @@ class BlockContentsViewController: UIViewController {
     func getTransaction(_ trans: Transaction){
         for action in trans.actions{
             EOSNetworking.getABI(with: action.account).map { (json) in
-                print(json)
+                
             }
         }
 //        EOSNetworking.getTransaction(with: id).map{ trans in

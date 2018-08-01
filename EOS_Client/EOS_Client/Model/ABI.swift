@@ -11,7 +11,13 @@ import SwiftyJSON
 
 class ABI{
     
+    // TODO Flesh this out once we have data containing non-empty Ricardian Contracts
+    
     init?(with json: JSON) {
         print(json)
+    }
+    
+    func toString() -> String{
+        return ""
     }
 }

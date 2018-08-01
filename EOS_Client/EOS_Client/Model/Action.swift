@@ -47,6 +47,6 @@ class Action{
     }
     
     func toString()->String{
-        return name
+        return "\(name): \(data)"
     }
 }

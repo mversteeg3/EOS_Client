@@ -58,7 +58,7 @@ class Transaction{
         var ret =
             "id: \(id)\n " +
             "status: \(status)\n " +
-            "cpu: \(kcpuUsage)" +
+            "cpu: \(kcpuUsage)\n" +
             "netUsage: \(netUsageWords)\n "
         if actions.count > 0{
             ret += "actions:\n"

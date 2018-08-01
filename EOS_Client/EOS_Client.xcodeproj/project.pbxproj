@@ -15,7 +15,6 @@
 		B577C669210F5B4500FAEB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B577C668210F5B4500FAEB81 /* Assets.xcassets */; };
 		B577C66C210F5B4500FAEB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B577C66A210F5B4500FAEB81 /* LaunchScreen.storyboard */; };
 		B577C677210F5B4500FAEB81 /* EOS_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C676210F5B4500FAEB81 /* EOS_ClientTests.swift */; };
-		B577C682210F5B4500FAEB81 /* EOS_ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C681210F5B4500FAEB81 /* EOS_ClientUITests.swift */; };
 		B577C690210F5E7200FAEB81 /* EOSNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C68F210F5E7200FAEB81 /* EOSNetworking.swift */; };
 		B577C691210F5E7200FAEB81 /* EOSNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C68F210F5E7200FAEB81 /* EOSNetworking.swift */; };
 		B577C692210F5E7200FAEB81 /* EOSNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577C68F210F5E7200FAEB81 /* EOSNetworking.swift */; };
@@ -81,8 +80,6 @@
 		B577C676210F5B4500FAEB81 /* EOS_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOS_ClientTests.swift; sourceTree = "<group>"; };
 		B577C678210F5B4500FAEB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B577C67D210F5B4500FAEB81 /* EOS_ClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EOS_ClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B577C681210F5B4500FAEB81 /* EOS_ClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOS_ClientUITests.swift; sourceTree = "<group>"; };
-		B577C683210F5B4500FAEB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B577C68F210F5E7200FAEB81 /* EOSNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSNetworking.swift; sourceTree = "<group>"; };
 		B577C693210F607700FAEB81 /* BlockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfo.swift; sourceTree = "<group>"; };
 		B577C69B210F613B00FAEB81 /* Date+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Util.swift"; sourceTree = "<group>"; };
@@ -153,7 +150,6 @@
 			children = (
 				B577C660210F5B4200FAEB81 /* EOS_Client */,
 				B577C675210F5B4500FAEB81 /* EOS_ClientTests */,
-				B577C680210F5B4500FAEB81 /* EOS_ClientUITests */,
 				B577C65F210F5B4200FAEB81 /* Products */,
 				0D1B58ADF00616606349DFCF /* Pods */,
 				77552F72BDB93AD4FF3A3531 /* Frameworks */,
@@ -192,15 +188,6 @@
 				B577C678210F5B4500FAEB81 /* Info.plist */,
 			);
 			path = EOS_ClientTests;
-			sourceTree = "<group>";
-		};
-		B577C680210F5B4500FAEB81 /* EOS_ClientUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B577C681210F5B4500FAEB81 /* EOS_ClientUITests.swift */,
-				B577C683210F5B4500FAEB81 /* Info.plist */,
-			);
-			path = EOS_ClientUITests;
 			sourceTree = "<group>";
 		};
 		B577C697210F607A00FAEB81 /* Model */ = {
@@ -497,7 +484,6 @@
 			files = (
 				B577C6AA210F641600FAEB81 /* Transaction.swift in Sources */,
 				B577C6B22111E33F00FAEB81 /* Action.swift in Sources */,
-				B577C682210F5B4500FAEB81 /* EOS_ClientUITests.swift in Sources */,
 				B577C69E210F613B00FAEB81 /* Date+Util.swift in Sources */,
 				B577C6B62111F1A700FAEB81 /* ABI.swift in Sources */,
 				B577C696210F607700FAEB81 /* BlockInfo.swift in Sources */,

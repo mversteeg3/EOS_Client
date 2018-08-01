@@ -10,7 +10,9 @@ import Foundation
 import SwiftyJSON
 public typealias BlockNum = Int
 
-class BlockData{
+class BlockData: Equatable{
+    
+    
     var id: String
     var blockNum: BlockNum
     var previous: String
@@ -25,6 +27,7 @@ class BlockData{
     var regions: [Region] = []
     var inputTransactions: [Transaction] = []
     var refBlockPrefix: Int
+    var abi: ABI?
     
     init?(with json: JSON){
         print(json)
@@ -141,8 +144,14 @@ class BlockData{
             }
         }
         
+        if let abi = abi{
+            ret += "abi:\n\(abi.toString)"
+        }
+        
         return ret
-        
-        
+    }
+    
+    static func == (lhs: BlockData, rhs: BlockData) -> Bool {
+        return lhs.id == rhs.id && lhs.blockNum == rhs.blockNum
     }
 }

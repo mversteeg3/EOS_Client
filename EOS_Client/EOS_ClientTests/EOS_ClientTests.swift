@@ -22,30 +22,56 @@ class EOS_ClientTests: XCTestCase {
     }
     
     func testEndpoints() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        guard let blockInfo = try? EOSNetworking.fetchBlockInfo().wait() else{
-            XCTFail("Failed to load block info")
-            return
+        let exp = expectation(description: "BlockInfo")
+        var blockInfo: BlockInfo?
+        EOSNetworking.fetchBlockInfo().done { b in
+            blockInfo = b
+            exp.fulfill()
+        }.catch { (err) in
+            print(err)
         }
-        guard let blockDetails_ID = EOSNetworking.fetchBlock(with: blockInfo.headBlockID).value() else{
-            XCTFail("Failed to load block info")
-            return
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        if blockInfo == nil{
+            XCTFail("Block info value was nil")
         }
-        guard let blockDetails_Num = EOSNetworking.fetchBlock(with: blockInfo.headBlockNum).value() else{
-            XCTFail("Failed to load block info")
-            return
+        
+        let idExp = expectation(description: "BlockDetails_Id")
+        var blockDetails_ID: BlockData?
+        EOSNetworking.fetchBlock(with: "\(blockInfo!.headBlockID)").done { b_d in
+            blockDetails_ID = b_d
+            idExp.fulfill()
+            }.catch { (err) in
+                print(err)
         }
+        let numExp = expectation(description: "BlockDetails_Num")
+        var blockDetails_Num: BlockData?
+        EOSNetworking.fetchBlock(with: "\(blockInfo!.headBlockNum)").done { b_d in
+            blockDetails_Num = b_d
+            numExp.fulfill()
+            }.catch { (err) in
+                print(err)
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+        
         if blockDetails_ID != blockDetails_Num{
             XCTFail("Mismatching block ID and num")
         }
+        
+        let abiExp = expectation(description: "ABI")
+        EOSNetworking.getABI(with: "eosio.token").done { abi in
+            abiExp.fulfill()
+            }.catch { (err) in
+                print(err)
+        }
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testBlockDetails(_ id: String){
+        
     }
+    
+//    func test
     
 }
