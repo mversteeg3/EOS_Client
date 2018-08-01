@@ -101,11 +101,13 @@ class BlockData{
             // Should this be considered a failure?
         }
         
-//        if let _it = json["input_transactions"].array{
-//            for t in _it{
-//                if let transaction = Transaction(t)
-//            }
-//        }
+        if let _it = json["transactions"].array{
+            for t in _it{
+                if let transaction = Transaction(with: t){
+                    inputTransactions.append(transaction)
+                }
+            }
+        }
         
         guard let _ps = json["producer_signature"].string else{
             return nil
@@ -119,7 +121,7 @@ class BlockData{
     }
     
     func toString() -> String{
-        return
+        var ret =
             "id: \(id)\n\n" +
             "blockNumber: \(blockNum)\n\n" +
             "timestamp: \(timeStamp.friendly)\n\n" +
@@ -131,5 +133,16 @@ class BlockData{
             "new producers: \(newProducers.joined(separator: "," ))\n\n" +
             "producerSignature: \(producerSignature)\n\n" +
             "refBlockPrefix: \(refBlockPrefix)\n\n"
+        
+        if inputTransactions.count > 0{
+            ret += "transactions:\n"
+            for trans in inputTransactions{
+                ret += "\t\(trans.toString())\n"
+            }
+        }
+        
+        return ret
+        
+        
     }
 }

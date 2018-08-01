@@ -21,9 +21,24 @@ class EOS_ClientTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testEndpoints() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        guard let blockInfo = try? EOSNetworking.fetchBlockInfo().wait() else{
+            XCTFail("Failed to load block info")
+            return
+        }
+        guard let blockDetails_ID = EOSNetworking.fetchBlock(with: blockInfo.headBlockID).value() else{
+            XCTFail("Failed to load block info")
+            return
+        }
+        guard let blockDetails_Num = EOSNetworking.fetchBlock(with: blockInfo.headBlockNum).value() else{
+            XCTFail("Failed to load block info")
+            return
+        }
+        if blockDetails_ID != blockDetails_Num{
+            XCTFail("Mismatching block ID and num")
+        }
     }
     
     func testPerformanceExample() {

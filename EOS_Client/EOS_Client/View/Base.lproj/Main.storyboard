@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,22 +30,31 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awn-rA-O8M"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lb7-os-rfa">
-                                <rect key="frame" x="32" y="84" width="311" height="455"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lb7-os-rfa">
+                                <rect key="frame" x="32" y="136" width="311" height="403"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="P2E-Sk-EK3">
+                                <rect key="frame" x="155" y="56" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="P2E-Sk-EK3" secondAttribute="height" multiplier="1:1" id="FO8-9V-Ec2"/>
+                                    <constraint firstAttribute="height" constant="64" id="l3k-BQ-cTf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BEk-kd-knt" secondAttribute="bottom" constant="32" id="4ch-QW-4D3"/>
-                            <constraint firstItem="Lb7-os-rfa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="Ih4-J9-Iq9"/>
+                            <constraint firstItem="P2E-Sk-EK3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ay6-cn-8XB"/>
                             <constraint firstItem="Lb7-os-rfa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="YtB-UF-s74"/>
                             <constraint firstItem="BEk-kd-knt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="d68-fM-ZQl"/>
+                            <constraint firstItem="Lb7-os-rfa" firstAttribute="top" secondItem="P2E-Sk-EK3" secondAttribute="bottom" constant="16" id="gz5-gB-M4I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lb7-os-rfa" secondAttribute="trailing" constant="32" id="l3q-S2-iXN"/>
                             <constraint firstItem="BEk-kd-knt" firstAttribute="top" secondItem="Lb7-os-rfa" secondAttribute="bottom" constant="32" id="sKT-jk-hFK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BEk-kd-knt" secondAttribute="trailing" constant="32" id="sgb-Am-Kt2"/>
+                            <constraint firstItem="P2E-Sk-EK3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="yCk-Be-5oM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -54,6 +64,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="512" height="512"/>
+    </resources>
 </document>

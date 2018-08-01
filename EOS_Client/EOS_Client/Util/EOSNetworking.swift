@@ -32,6 +32,9 @@ class EOSNetworking{
     static var chain_base: String{
         return "\(url_base)/chain"
     }
+    static var history_base: String{
+        return "\(url_base)/history"
+    }
     
     static func fetchBlockInfo() ->  Promise<BlockInfo>{
         return Promise { seal in
@@ -73,6 +76,31 @@ class EOSNetworking{
                     switch response.result {
                     case .success(let data):
                         guard let ret = BlockData(with: JSON(data)) else {
+                            return seal.reject(NetworkError("Error: Response data was malformed"))
+                        }
+                        seal.fulfill(ret)
+                    case .failure(let error):
+                        seal.reject(error)
+                    }
+            }
+        }
+    }
+    
+    static func getABI(with account: String) -> Promise<ABI>{
+        return Promise { seal in
+            guard let url = URL(string: "\(chain_base)/get_abi") else {
+                return seal.reject(NetworkError("Invalid URL"))
+            }
+            Alamofire.request(url,
+                              method: .post,
+                              parameters: ["account_name":"\(account)"],
+                              encoding: JSONEncoding.default,
+                              headers: nil)
+                .validate()
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let data):
+                        guard let ret = ABI(with: JSON(data)) else {
                             return seal.reject(NetworkError("Error: Response data was malformed"))
                         }
                         seal.fulfill(ret)

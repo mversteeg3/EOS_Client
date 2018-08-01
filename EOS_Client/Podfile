@@ -8,7 +8,7 @@ target 'EOS_Client' do
   pod 'PromiseKit'
   pod 'SwiftyJSON'
   pod 'MBProgressHUD'
-
+  pod 'Toaster' 
   # Pods for EOS_Client
 
   target 'EOS_ClientTests' do
